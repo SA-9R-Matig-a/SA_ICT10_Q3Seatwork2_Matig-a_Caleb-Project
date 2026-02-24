@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>Regiment Selection</title>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url("https://static.wikia.nocookie.net/shingekinokyojin/images/8/86/Military.png/revision/latest/scale-to-width-down/1200?cb=20170823064044");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h2{
+            font-weight: 800;
+            font-size: 300%;
+        }
+
+        .btn, .btn-signup {
+            width: 100%;
+            padding: 10px;
+            background-color: #1c734e;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            background-color: #105241;
+            color:white;
+        }
+
+        .form-label{
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .form-check{
+            background-color: #111D4A;
+            width: 60%;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+
+        .form-check:hover{
+            transform: scale(1.02);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-check-input{
+            cursor: pointer;
+            background-color: #bababa;
+        }
+
+        .form-check-input:hover{
+            cursor: pointer;
+        }
+
+        .mb-3{
+            margin-bottom: 25px !important;
+        }
+
+        .form-check-label{
+            cursor: pointer;
+        }
+
+        .card{
+            background-color: #E7E6F7;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #level {
+            background-color: #111D4A;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            cursor:pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+
+        #level:hover{
+            transform: scale(1.0025);
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        #section {
+            background-color: #111D4A;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            cursor:pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+
+        #section:hover{
+            transform: scale(1.0025);
+            transition: all 0.3s ease-in-out;
+        }
+
+
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 w-50" id="box">
+        <center>
+        <h2 class="text-center">Regiment Selection</h2>
+        <p>"Your Heart and Soul to the Cause"</p>
+        <hr>
+        <br>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Are you done with the online registration?</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="registered" name="registration" value="registered">
+                    <label class="form-check-label" for="registered">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="notRegistered" name="registration" value="notRegistered">
+                    <label class="form-check-label" for="notRegistered">No</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Do you have the medical clearance from the field hospital?</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="cleared" name="clearance" value="cleared">
+                    <label class="form-check-label" for="cleared">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="notCleared" name="clearance" value="notCleared">
+                    <label class="form-check-label" for="notCleared">No</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">What's your Grade & Section?</label><br>
+                <select id="level" class="form-select mb-2">
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <select id="section" class="form-select">
+                    <option value='emerald'>Emerald</option>
+                    <option value='ruby'>Ruby</option>
+                    <option value='sapphire'>Sapphire</option>
+                    <option value='topaz'>Topaz</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Academic Average Score?</label>
+                    <input id="average" type="text" class="form-control text-center" style="width:500px;" placeholder="Please Enter Average Grade Computed From Account Creation">
+                <br>
+            </div>
+
+            <div class="d-grid">
+                <input type="button" py-click="regiment_checker" value="Sign up" class="btn btn-signup">
+            </div>
+        </form>
+        <center>
+        <div id="output" class="mt-3"></div>
+        <div id="image" class="mt-3"></div>
+        <div id="leader" class="mt-3"></div>
+        </center>
+    </div>
+    </center>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
