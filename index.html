@@ -125,7 +125,7 @@
 
     </style>
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100">
+<body class="d-flex justify-content-center align-items-center min-vh-100">
     <div class="card p-4 w-50" id="box">
         <center>
         <h2 class="text-center">Regiment Selection</h2>
@@ -168,14 +168,13 @@
                 <select id="section" class="form-select">
                     <option value='emerald'>Emerald</option>
                     <option value='ruby'>Ruby</option>
-                    <option value='sapphire'>Sapphire</option>
-                    <option value='topaz'>Topaz</option>
                 </select>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Academic Average Score?</label>
                     <input id="average" type="text" class="form-control text-center" style="width:500px;" placeholder="Please Enter Average Grade Computed From Account Creation">
+                    <div id="eligible" class="mt-3"></div>
                 <br>
             </div>
 

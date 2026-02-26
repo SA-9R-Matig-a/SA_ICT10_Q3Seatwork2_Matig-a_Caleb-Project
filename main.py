@@ -33,6 +33,11 @@ def regiment_checker(e):
     elif clearance != 'cleared':
         display(f'Not eligible: medical clearance required. Go to the field hospital and secure your clearance.', target='output')
 
+    if average < 95:
+        display(f'Not Eligible for Military Police', target='eligible')
+    else:
+        display(f'Eligible for Military Police', target='eligible')
+
     #checks first the average, then the grade level, and lastly the section to determine regiment and squad number
     #if average is less than 95, will check for other conditions to determine which regiment to join
     if average < 95:
@@ -49,192 +54,50 @@ def regiment_checker(e):
                 <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/8/81/Training_Corps.png/revision/latest?cb=20180127213207" width="300">
                 """
                 display(f'You Report to Keith Shadis', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Training Corps, Squad 3!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/8/81/Training_Corps.png/revision/latest?cb=20180127213207" width="300">
-                """
-                display(f'You Report to Keith Shadis', target='leader')
-            elif section == "topaz":
-                display(f'Congratulations! You are part of the Training Corps, Squad 4!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/8/81/Training_Corps.png/revision/latest?cb=20180127213207" width="300">
-                """
-                display(f'You Report to Keith Shadis', target='leader')
         elif grade_level == 8:
             if section == "emerald":
-                display(f'Congratulations! You are part of the Garrison Regiment, Squad 1!', target='output')
+                display(f'Congratulations! You are part of the Garrison Regiment, Squad Rico!', target='output')
                 document.getElementById("image").innerHTML = """
                 <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest?cb=20140307090257" width="300">
                 """
                 display(f'You Report to Dot Pixis', target='leader')
-            elif section == "ruby":
-                display(f'Congratulations! You are part of the Garrison Regiment, Squad 2!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest?cb=20140307090257" width="300">
-                """
-                display(f'You Report to Dot Pixis', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Garrison Regiment, Squad 3!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest?cb=20140307090257" width="300">
-                """
-                display(f'You Report to Dot Pixis', target='leader')
-            elif section == "topaz":
-                display(f'Congratulations! You are part of the Garrison Regiment, Squad 4!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest?cb=20140307090257" width="300">
-                """
-                display(f'You Report to Dot Pixis', target='leader')
-        elif grade_level == 9:
-            if section == "emerald":
-                display(f'Congratulations! You are part of the Scout Regiment, Squad Nanaba!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/a/a7/Survey_Corps_Logo.png/revision/latest?cb=20140307090257" width="300">
-                """
-                display(f'You Report to Erwin Smith', target='leader')
             elif section == "ruby":
                 display(f'Congratulations! You are part of the Scout Regiment, Squad Levi!', target='output')
                 document.getElementById("image").innerHTML = """
                 <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/a/a7/Survey_Corps_Logo.png/revision/latest?cb=20140307090257" width="300">
                 """
                 display(f'You Report to Erwin Smith', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Scout Regiment, Squad Miche!', target='output')
+        elif grade_level == 9:
+            if section == "emerald":
+                display(f'Congratulations! You are part of the Garrison Regiment, Squad Rico!', target='output')
                 document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/a/a7/Survey_Corps_Logo.png/revision/latest?cb=20140307090257" width="300">
+                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest?cb=20140307090257" width="300">
                 """
-                display(f'You Report to Erwin Smith', target='leader')
-            elif section == "topaz":
-                display(f'Congratulations! You are part of the Scout Regiment, Squad Zoe!', target='output')
+                display(f'You Report to Dot Pixis', target='leader')
+            elif section == "ruby":
+                display(f'Congratulations! You are part of the Scout Regiment, Squad Levi!', target='output')
                 document.getElementById("image").innerHTML = """
                 <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/a/a7/Survey_Corps_Logo.png/revision/latest?cb=20140307090257" width="300">
                 """
                 display(f'You Report to Erwin Smith', target='leader')
         elif grade_level == 10: 
             if section == "emerald":
-                display(f'Congratulations! You are part of the Training Corps (Instructor), Platoon 1', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/8/81/Training_Corps.png/revision/latest?cb=20180127213207" width="300">
-                """
-                display(f'You Report to the Keith Shadis', target='leader')
-            elif section == "ruby":
-                display(f'Congratulations! You are part of the Garrison Regiment, Wall Defense!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest?cb=20140307090257" width="300">
-                """
-                display(f'You Report to Dot Pixis', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Scout Regiment, Mounted Brigade!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/a/a7/Survey_Corps_Logo.png/revision/latest?cb=20140307090257" width="300">
-                """
-                display(f'You Report to Erwin Smith', target='leader')
-            elif section == "topaz":
                 display(f'Congratulations! You are part of the Garrison Regiment, Corps of Engineers!', target='output')
                 document.getElementById("image").innerHTML = """
                 <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest?cb=20140307090257" width="300">
                 """
                 display(f'You Report to Dot Pixis', target='leader')
-    #if average is equal to or greater than 95, automaticall join the Military Police and assing a squad
+            elif section == "ruby":
+                display(f'Congratulations! You are part of the Scout Regiment, Titan Research!', target='output')
+                document.getElementById("image").innerHTML = """
+                <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/a/a7/Survey_Corps_Logo.png/revision/latest?cb=20140307090257" width="300">
+                """
+                display(f'You Report to Erwin Smith', target='leader')
+
+    #if average is equal to or greater than 95, automatically join the Military Police and assign a squad
     else:
-        if grade_level == 7: 
-            if section == "emerald":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 1', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
+        display(f'Congratulations! You are part of the Military Police, Interior Squad - Anti-Personnel', target='output')
+        document.getElementById("image").innerHTML = """
+            <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
                 """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "ruby":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 2!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 3!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "topaz":
-                display(f'Congratulations! You are part of the Military Police Regiment, Anti-Personnel Squad!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-        if grade_level == 8: 
-            if section == "emerald":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 1', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "ruby":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 2!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 3!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "topaz":
-                display(f'Congratulations! You are part of the Military Police Regiment, Anti-Personnel Squad!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-        if grade_level == 9: 
-            if section == "emerald":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 1', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "ruby":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 2!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 3!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "topaz":
-                display(f'Congratulations! You are part of the Military Police Regiment, Anti-Personnel Squad!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-        if grade_level == 10: 
-            if section == "emerald":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 1', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "ruby":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 2!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "sapphire":
-                display(f'Congratulations! You are part of the Military Police, Interior Squad 3!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
-            elif section == "topaz":
-                display(f'Congratulations! You are part of the Military Police Regiment, Anti-Personnel Squad!', target='output')
-                document.getElementById("image").innerHTML = """
-                <img src="https://static.wikia.nocookie.net/attack-on-titan-regiments/images/e/ea/Military_Police.png/revision/latest?cb=20180127213300" width="300">
-                """
-                display(f'You Report to Nile Dok', target='leader')
+        display(f'You Report to Nile Dok', target='leader')
