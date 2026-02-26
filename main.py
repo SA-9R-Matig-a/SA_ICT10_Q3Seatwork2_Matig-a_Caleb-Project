@@ -6,9 +6,11 @@ def regiment_checker(e):
     document.getElementById('output').innerHTML = ' '
     document.getElementById('image').innerHTML = ' '
     document.getElementById('leader').innerHTML = ' '
+    document.getElementById('eligible').innerHTML = ' '
 
     registration_input = document.querySelector('input[name="registration"]:checked')
     clearance_input = document.querySelector('input[name="clearance"]:checked')
+    average_input = document.getElementById('average').value
 
     #checks if inputs are empty
     if registration_input is None:
@@ -16,6 +18,15 @@ def regiment_checker(e):
         return
     if clearance_input is None:
         display("Please select your medical clearance.", target="output")
+        return
+    
+    #specially checks if average is empty, using try and except to counter empty fields
+    if average_input == " ":
+        display("Please input your average.", target="output")
+    try:
+        average = float(average_input)
+    except:
+        display("Average must be a valid number.", target="output")
         return
 
     registration = registration_input.value
